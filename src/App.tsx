@@ -4,6 +4,7 @@ import './App.css';
 import Text from './components/Text'
 import Input from './components/Input'
 import Button from './components/Button'
+import List from './components/List'
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
                 <Input />
                 <Button />
             </div>
+          </div>
+          <div className="mid_content">
+            <List />
           </div>
       </div>
     </div>
