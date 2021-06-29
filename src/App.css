@@ -31,10 +31,17 @@
 }
 
 .App .content .mid_content {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: 70vh;
+  overflow: hidden;
   overflow-y: scroll;
+
 }
+
+
+
+
