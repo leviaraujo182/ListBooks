@@ -1,8 +1,12 @@
 import React from 'react'
 import './Input.css'
 
-function Input (){
-    return <input type="text" />
+interface PropsInput {
+    setText: React.Dispatch<React.SetStateAction<string>>
+}
+
+function Input (props: PropsInput){
+    return <input type="text" id="pesq" onChange={(e: React.FormEvent<HTMLInputElement>) => props.setText(e.currentTarget.value)} />
 }
 
 export default Input

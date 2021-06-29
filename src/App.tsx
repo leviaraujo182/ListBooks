@@ -6,14 +6,23 @@ import Text from './components/Text'
 import Input from './components/Input'
 import Button from './components/Button'
 import List from './components/List'
+import api from './api/api'
 
 function App() {
 
   const [data, setData] = useState([])
   const [text, setText] = useState('')
 
-  function getData (){
-    alert("Hello World")
+  async function getData (){
+
+   await api.get(text).then((data)=> {
+      setData(data.data.hits)
+   }).catch((err)=>{
+     console.log("Não foi possivel fazer a requisição pelo erro" + err)
+   })
+
+   console.log(data)   
+  
   }
 
   return (
@@ -22,12 +31,14 @@ function App() {
         <div className="header">
             <Text title="<Titulo da sua escolha>" />
               <div className="search">
-                <Input />
+                <Input setText={setText} />
                 <Button onclick={getData}/>
             </div>
           </div>
           <div className="mid_content">
-            <List />
+            {data.map((response:any, key: number)=> (
+              <List author={response.title} title={response.title} url={response.url} key={key} />
+            ))}
           </div>
       </div>
     </div>
