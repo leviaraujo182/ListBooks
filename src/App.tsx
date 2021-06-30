@@ -36,9 +36,9 @@ function App() {
             </div>
           </div>
           <div className="mid_content">
-            {data.length > 0 ? 
+            {data.length ? 
               data.map((response:any, key: number)=> (
-                <List author={response.author == null ? "Autor não informado" : response.author} title={response.title == null ? "Titulo não informado" : response.title} url={response.url == null ? "Url não informada" : response.url} key={key} />
+                <List author={response.author ? response.author : "Autor não informado"} title={response.title ? response.title : "Titulo não informado"} url={response.url ? response.url : "Url não informada"} key={key} />
             )) : <Text title="Nenhum registro encontrado" />}
 
           </div>

@@ -23,9 +23,10 @@ code {
 
 .App .content{
   background-color: #ffff;
-  width: 35.7rem;
-  height: 35rem;
+  width: 40%;
+  height: 90%;
 }
+
 
 .App .content .header {
   width: 100%;
@@ -46,7 +47,6 @@ code {
 }
 
 .App .content .mid_content {
-  display: inline-block;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -54,7 +54,6 @@ code {
   height: 70vh;
   overflow: hidden;
   overflow-y: scroll;
-
 }
 
 

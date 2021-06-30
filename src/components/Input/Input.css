@@ -1,5 +1,15 @@
 input {
-    width: 23rem;
+    width: 70%;
     height: 2rem;
     font-size: 20px;
+}
+
+@media screen and (max-width: 768px){
+    input {
+        width: 70%;
+        height: 2rem;
+        font-size: 20px;
+        margin-left: 11px;
+        margin-right: 1px;
+    }
 }
