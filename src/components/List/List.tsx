@@ -10,14 +10,13 @@ interface PropsList {
 }
 
 function List(props: PropsList){
-
     return (
         <div className="list">
             <div className="container">
                 <dl>
-                    <dt className="item_list"><FontAwesomeIcon icon={faUser}/> Author: {props.author} </dt>
-                    <dt className="item_list"><FontAwesomeIcon icon={faBook}/> Title: {props.title}</dt>
-                    <dt className="item_list"><FontAwesomeIcon icon={faLink}/> Url: {props.url}</dt>
+                    <dt className="item_list"><FontAwesomeIcon icon={faUser}/> {props.author} </dt>
+                    <dt className="item_list"><FontAwesomeIcon icon={faBook}/> {props.title}</dt>
+                    <dt className="item_list"><FontAwesomeIcon icon={faLink}/> {props.url}</dt>
                 </dl>
             </div>
         </div>

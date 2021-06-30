@@ -12,7 +12,7 @@ function App() {
 
   const [data, setData] = useState([])
   const [text, setText] = useState('')
-
+  
   async function getData (){
 
    await api.get(text).then((data)=> {
@@ -29,7 +29,7 @@ function App() {
     <div className="App">
       <div className="content">
         <div className="header">
-            <Text title="<Titulo da sua escolha>" />
+            <Text title="ListBook" />
               <div className="search">
                 <Input setText={setText} />
                 <Button onclick={getData}/>
@@ -38,7 +38,7 @@ function App() {
           <div className="mid_content">
             {data.length > 0 ? 
               data.map((response:any, key: number)=> (
-                <List author={response.author} title={response.title} url={response.url} key={key} />
+                <List author={response.author == null ? "Autor não informado" : response.author} title={response.title == null ? "Titulo não informado" : response.title} url={response.url == null ? "Url não informada" : response.url} key={key} />
             )) : <Text title="Nenhum registro encontrado" />}
 
           </div>
