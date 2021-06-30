@@ -1,11 +1,16 @@
 import react from 'react'
+import './Text.css'
 
 interface TextProps {
     title: string
 }
 
 function Text (props: TextProps){
-    return <label>{props.title}</label>
+    return (
+        <div className="text">
+            <label className="title">{props.title}</label>    
+        </div>
+    )
 }
 
 export default Text

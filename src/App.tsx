@@ -36,9 +36,11 @@ function App() {
             </div>
           </div>
           <div className="mid_content">
-            {data.map((response:any, key: number)=> (
-              <List author={response.title} title={response.title} url={response.url} key={key} />
-            ))}
+            {data.length > 0 ? 
+              data.map((response:any, key: number)=> (
+                <List author={response.author} title={response.title} url={response.url} key={key} />
+            )) : <Text title="Nenhum registro encontrado" />}
+
           </div>
       </div>
     </div>
