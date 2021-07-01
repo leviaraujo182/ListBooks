@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import Axios from 'axios'
 
 import Text from './components/Text'
 import Input from './components/Input'
