@@ -6,6 +6,8 @@ import Text from './components/Text'
 import Input from './components/Input'
 import Button from './components/Button'
 import List from './components/List'
+import Title from './components/Title'
+
 import api from './api/api'
 
 function App() {
@@ -29,7 +31,7 @@ function App() {
     <div className="App">
       <div className="content">
         <div className="header">
-            <Text title="ListBook" />
+            <Title text="ListBooks"/>
               <div className="search">
                 <Input setText={setText} />
                 <Button onclick={getData}/>

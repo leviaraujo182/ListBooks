@@ -54,6 +54,7 @@ code {
   height: 70vh;
   overflow: hidden;
   overflow-y: scroll;
+  margin-top: 10px;
 }
 
 
